@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.example.timefighter.ui.authentication.SignupFragment"
+        android:label="SignupFragment"
+        >
+        <action
+            android:id="@+id/action_signUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.timefighter.ui.authentication.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_dashboardActivity"
+            app:destination="@id/gameActivity" />
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signupFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/gameActivity"
+        android:name="com.example.timefighter.ui.game.GameActivity"
+        android:label="GameActivity" />
+
+</navigation>

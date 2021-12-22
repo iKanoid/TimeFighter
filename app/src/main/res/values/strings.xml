@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">TFighter</string>
+    <string name="yourScore">Your Score: %1$d</string>
+    <string name="timeLeft">Time Left: %1$d</string>
+    <string name="tapMe">Tap Me!</string>
+    <string name="gameOverMessage">Times up! Your score was: %1$d </string>
+    <string name="aboutMenu">About</string>
+    <string name="aboutTitle">Time Fighter</string>
+    <string name="aboutMessage">Created by baiden</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="all_first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="signup">SignUp</string>
+    <string name="login">Login</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="login_to_continue">Login to continue</string>
+    <string name="create_an_account">Create an Account</string>
+    <string name="lets_get_to_know_you">Lets get to know you</string>
+    <string name="enter_email_address">Enter Email Address</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_first_name">Enter </string>
+    <string name="all_have_an_account">Have an account?</string>
+    <string name="all_login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="new_user_sign_up_for_free">New Player? Sign Up for free</string>
+    <string name="log_out">Logout</string>
+    <string name="score">Score: %d</string>
+    <string name="word_count">%d of %d words</string>
+    <string name="login_status">Login Status</string>
+    <string name="science_questions">Science Questions</string>
+    <string name="title_question">(%1$d/%2$d)</string>
+    <string name="congratulations">Congratulations</string>
+    <string name="you_scored">"You scored: %d"</string>
+    <string name="exit">Exit</string>
+    <string name="play_again">Play Again</string>
+</resources>

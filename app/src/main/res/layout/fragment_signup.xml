@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/email_sign_up_fragment_root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/email_sign_up_fragment_title_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_18dp"
+                android:layout_marginTop="@dimen/margin_46dp"
+                android:text="@string/create_an_account"
+                android:textColor="@color/dark_brown"
+                android:textSize="@dimen/text_size_18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/email_sign_up_fragment_subtitle_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_18dp"
+                android:layout_marginTop="@dimen/margin_9dp"
+                android:text="@string/lets_get_to_know_you"
+                android:textColor="@color/dark_brown"
+                android:textSize="@dimen/text_size_18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email_sign_up_fragment_title_text_view" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/first_name_text_input_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_18dp"
+                android:layout_marginTop="@dimen/margin_46dp"
+                android:hint="@string/all_first_name"
+                app:boxStrokeColor="@color/burnt_orange"
+                app:counterMaxLength="20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email_sign_up_fragment_subtitle_text_view">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/first_name_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textCapSentences"
+                    android:maxLines="1"
+                    android:textColor="@color/burnt_orange" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/last_name_text_input_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_18dp"
+                android:layout_marginTop="@dimen/margin_46dp"
+                android:hint="@string/last_name"
+                app:boxStrokeColor="@color/burnt_orange"
+                app:counterMaxLength="20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/first_name_text_input_layout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/last_name_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textCapSentences"
+                    android:maxLines="1"
+                    android:textColor="@color/burnt_orange" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email_text_input_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_18dp"
+                android:layout_marginTop="@dimen/margin_46dp"
+                android:hint="@string/email"
+                app:boxStrokeColor="@color/burnt_orange"
+                app:counterMaxLength="20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/last_name_text_input_layout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:textColor="@color/burnt_orange" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password_text_input_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_18dp"
+                android:layout_marginTop="@dimen/margin_46dp"
+                android:hint="@string/password"
+                app:boxStrokeColor="@color/burnt_orange"
+                app:counterMaxLength="20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email_text_input_layout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:textColor="@color/burnt_orange" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/signup_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_34dp"
+                android:paddingVertical="@dimen/padding_16dp"
+                android:text="@string/signup"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_size_18sp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/password_text_input_layout"
+                app:layout_constraintStart_toStartOf="@+id/password_text_input_layout"
+                app:layout_constraintTop_toBottomOf="@+id/password_text_input_layout" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:indeterminateTint = "@color/pink_700"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/email_sign_up_fragment_have_account_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_76dp"
+                android:text="@string/all_have_an_account"
+                android:textColor="@color/dark_brown"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/signup_button"
+                app:layout_constraintHorizontal_bias="0.45"
+                app:layout_constraintStart_toStartOf="@+id/signup_button"
+                app:layout_constraintTop_toTopOf="@+id/email_sign_up_fragment_login_text_view"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/email_sign_up_fragment_login_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_18dp"
+                android:layout_marginTop="@dimen/margin_18dp"
+                android:text="@string/all_login"
+                android:textColor="@color/dark_brown"
+                app:layout_constraintStart_toEndOf="@+id/email_sign_up_fragment_have_account_text_view"
+                app:layout_constraintTop_toBottomOf="@+id/signup_button" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>
