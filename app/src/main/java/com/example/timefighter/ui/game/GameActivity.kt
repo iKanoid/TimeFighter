@@ -19,6 +19,8 @@ import kotlinx.android.synthetic.main.activity_game.*
 
 class GameActivity : AppCompatActivity() {
     private lateinit var binding: ActivityGameBinding
+//    private lateinit var sessionManager: SessionManager
+//    lateinit var pref: SharedPreferences
 
     internal var score = 0
     internal var gameStarted = false
@@ -42,6 +44,9 @@ class GameActivity : AppCompatActivity() {
         binding = ActivityGameBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+//        pref = application.getSharedPreferences(Constants.TOKEN, Context.MODE_PRIVATE)
+//        sessionManager = SessionManager(pref)
 
         Log.d(TAG, "onCreate called. Score is: $score")
 

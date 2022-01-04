@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navgraph"
     app:startDestination="@id/loginFragment">
 
@@ -8,7 +9,7 @@
         android:id="@+id/signupFragment"
         android:name="com.example.timefighter.ui.authentication.SignupFragment"
         android:label="SignupFragment"
-        >
+        tools:layout="@layout/fragment_signup">
         <action
             android:id="@+id/action_signUpFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
@@ -16,7 +17,8 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.timefighter.ui.authentication.LoginFragment"
-        android:label="LoginFragment" >
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_dashboardActivity"
             app:destination="@id/gameActivity" />
@@ -27,6 +29,7 @@
     <activity
         android:id="@+id/gameActivity"
         android:name="com.example.timefighter.ui.game.GameActivity"
-        android:label="GameActivity" />
+        android:label="GameActivity"
+        tools:layout="@layout/activity_game"/>
 
 </navigation>
