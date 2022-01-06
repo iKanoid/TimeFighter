@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.timefighter.R
@@ -35,6 +36,11 @@ class RecyclerViewAdapter(
         //holder.tv_Lname.text = Last_name[position]
         holder.tv_score.text = Score_user[position]
 
+        if(Full_name[position].equals(0)) {
+
+
+        }
+
         // implement setOnClickListener event on item view.
         holder.itemView.setOnClickListener {
             // display a toast with person name on item click
@@ -52,6 +58,7 @@ class RecyclerViewAdapter(
         var tv_FullName:TextView
         var tv_score: TextView
 
+        var imgScore: ImageView
 
         init {
 
@@ -60,6 +67,8 @@ class RecyclerViewAdapter(
             //tv_Lname = itemView.findViewById<View>(R.id.tv_Lname) as TextView
             tv_FullName = itemView.findViewById<View>(R.id.tv_FullName) as TextView
             tv_score = itemView.findViewById<View>(R.id.tv_score) as TextView
+
+            imgScore = itemView.findViewById<View>(R.id.imgScore) as ImageView
 
         }
     }

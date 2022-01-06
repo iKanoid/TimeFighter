@@ -9,6 +9,13 @@
         app:showAsAction="ifRoom" />
 
     <item
+        android:id="@+id/actionHighScore"
+        android:icon="@drawable/ic_score_24"
+        android:title="Score Board"
+        app:showAsAction="ifRoom" />
+
+
+    <item
         android:id="@+id/logout"
         android:title="@string/logout"
         app:showAsAction="never"/>

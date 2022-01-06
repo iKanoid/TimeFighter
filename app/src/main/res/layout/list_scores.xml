@@ -27,16 +27,29 @@
         android:textSize="20sp"/>
         -->
 
-    <TextView
-        android:textStyle="bold"
-        android:padding="5dp"
-        android:layout_marginStart="2dp"
+    <LinearLayout
         android:layout_weight="1"
-        android:id="@+id/tv_FullName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="List item"
-        android:textSize="15sp"/>
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_looks_one_24"/>
+
+        <TextView
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:layout_marginStart="2dp"
+            android:id="@+id/tv_FullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="List item"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
 
     <TextView
         android:textColor="#DD0808"
