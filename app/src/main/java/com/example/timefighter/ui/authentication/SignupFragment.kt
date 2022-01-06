@@ -74,6 +74,7 @@ class SignupFragment : Fragment() {
                 val currentUserObj = currentUser?.uid?.let { databaseReference.child(it) }
                 currentUserObj?.child("firstName")?.setValue(firstName)
                 currentUserObj?.child("lastName")?.setValue(lastName)
+                currentUserObj?.child("score")?.setValue(0)
                 Toast.makeText(requireContext(), "Successful", Toast.LENGTH_SHORT).show()
                 findNavController().navigate(R.id.loginFragment)
             }

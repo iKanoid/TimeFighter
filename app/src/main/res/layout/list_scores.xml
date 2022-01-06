@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:weightSum="3">
+
+    <!--
+    <TextView
+        android:padding="5dp"
+        android:layout_weight="1"
+        android:id="@+id/tv_Fname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="List item"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:padding="5dp"
+        android:layout_marginStart="2dp"
+        android:layout_weight="1"
+        android:id="@+id/tv_Lname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="List item"
+        android:textSize="20sp"/>
+        -->
+
+    <TextView
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:layout_marginStart="2dp"
+        android:layout_weight="1"
+        android:id="@+id/tv_FullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="List item"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:textColor="#DD0808"
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:layout_marginStart="2dp"
+        android:layout_weight="2"
+        android:id="@+id/tv_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="List item"
+        android:textSize="15sp"/>
+
+</LinearLayout>
