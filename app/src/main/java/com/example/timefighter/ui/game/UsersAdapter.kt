@@ -38,6 +38,8 @@ class UsersAdapter(context: Context?, users: ArrayList<User>) : ArrayAdapter<Use
             imgScore.setBackgroundResource(R.drawable.ic_looks_two_24)
         } else if (number == 4) {
             imgScore.setBackgroundResource(R.drawable.ic_looks_3_24)
+        } else {
+            imgScore.setBackgroundResource(R.drawable.ic_looks_white)
         }
         tvName.text = user!!.name
         tvHome.text = user.score
