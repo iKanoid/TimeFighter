@@ -10,13 +10,18 @@
     <LinearLayout
         android:id="@+id/linearScore"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         android:weightSum="3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -25,6 +30,7 @@
             android:padding="5dp"
             android:text="Player Names"
             android:textSize="20sp"
+            android:textColor="@color/black"
             android:textStyle="bold" />
 
         <TextView
@@ -41,6 +47,16 @@
 
     </LinearLayout>
 
+    <ListView
+        android:id="@+id/listViewScores"
+        tools:listitem="@layout/list_scores"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:transcriptMode="alwaysScroll" />
+
+    </LinearLayout>
+
+        <!--
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
@@ -50,5 +66,6 @@
         app:layout_constraintTop_toBottomOf="@+id/linearScore"
         app:layout_constraintVertical_bias="0.85"
         tools:listitem="@layout/list_scores" />
+        -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,17 +3,21 @@ package com.example.timefighter.ui.game
 import android.app.ProgressDialog
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.timefighter.R
-import com.example.timefighter.ui.MainActivity
 import com.example.timefighter.util.RecyclerViewAdapter
-import com.example.timefighter.util.User
+import com.example.timefighter.util.UserMany
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import java.util.*
+import kotlin.collections.ArrayList
+
 
 class ScoreActivity : AppCompatActivity() {
 
@@ -24,6 +28,10 @@ class ScoreActivity : AppCompatActivity() {
     var first_name = ArrayList<String>()
     var last_name = ArrayList<String>()
     var score_user = ArrayList<String>()
+
+    // Construct the data source
+    var arrayOfUsers = ArrayList<User>()
+
 
     private var pDialog: ProgressDialog? = null
 
@@ -46,36 +54,45 @@ class ScoreActivity : AppCompatActivity() {
         ref.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
 
-                full_name.clear()
-                score_user.clear()
+                //full_name.clear()
+                //score_user.clear()
+                arrayOfUsers.clear()
 
                 Log.e("Count " ,"" + dataSnapshot.getChildrenCount());
 
+
                 for (userSnapshot in dataSnapshot.children) {
-                    val product = userSnapshot.getValue(User::class.java)
+                    val product = userSnapshot.getValue(UserMany::class.java)
 
                     val firstName: String = java.lang.String.valueOf(product?.firstName)
                     val lastName: String = java.lang.String.valueOf(product?.lastName)
                     val score: String = java.lang.String.valueOf(product?.score)
 
+                    val newUser = User("$firstName $lastName", score)
 
-                    /*arrayListGamePlayers.add(firstName)
-                    arrayListGamePlayers.add(lastName)
-                    arrayListGamePlayers.add(score)*/
+                    arrayOfUsers.add(newUser)
 
-                    full_name.add("$firstName $lastName")
+                    //full_name.add("$firstName $lastName")
 
-                    //first_name.add(firstName)
-                    //last_name.add(lastName)
-
-                    score_user.add(score)
+                    //score_user.add(score)
 
 
                 }
 
-                //System.out.println(products)
-                //Toast.makeText(this@GameActivity,first_name.toString(),Toast.LENGTH_LONG).show()
+                arrayOfUsers.sortByDescending{it.score}
 
+                // Create the adapter to convert the array to views
+                val adapter = UsersAdapter(applicationContext, arrayOfUsers)
+
+                // Attach the adapter to a ListView
+                val listView: ListView = findViewById<ListView>(R.id.listViewScores)
+
+                listView.adapter = adapter
+
+                 /**
+
+                score_user.sort()
+                score_user.reverse()
 
                 val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
 
@@ -89,6 +106,8 @@ class ScoreActivity : AppCompatActivity() {
                 )
                 recyclerView.layoutManager = LinearLayoutManager(this@ScoreActivity)
                 recyclerView.adapter = customAdapter // set the Adapter to RecyclerView
+
+                **/
 
                 pDialog?.dismiss()
 
